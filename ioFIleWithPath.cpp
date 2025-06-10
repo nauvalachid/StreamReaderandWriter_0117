@@ -26,4 +26,16 @@ int main() {
     // selesai dalam menulis sekarang tutup filenya
     outfile.close();
     // membuka file dalam mode membaca.
+    ifstream infile;
+    // menunjuk ke sebuah nama file.
+    infile.open(NamaFile + ".txt", ios::in);
+    cout << endl << ">= Membuka dan Membaca file." << endl;
+    // jika file ada maka
+    if (infile.is_open()) {
+        // melakukan perulangan setiap baris
+        while (getline(infile, baris)) {
+            // menampilkan setiap baris
+            cout << baris << '\n';
+        }
+    }
 }
