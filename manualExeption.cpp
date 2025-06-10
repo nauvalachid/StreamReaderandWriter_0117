@@ -12,4 +12,7 @@ int main()
         // blok ini akan dieksekusi
         cout << "Pengecualian akan dieksekusi" << endl;
     }
+    catch (...) {
+        
+    }
 }
